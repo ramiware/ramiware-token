@@ -5,7 +5,9 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MyToken is ERC20 {
-    constructor(uint256 initialSupply) ERC20("Rami's KRC20 Token", "RAMITOKEN") {
-        _mint(msg.sender, initialSupply);
+    constructor(uint256 initialSupply) ERC20("Rami KRC20 Token", "RAMI") {
+        //_mint(msg.sender, initialSupply);
+        _mint(msg.sender, initialSupply * 10 ** decimals());
     }
 }
+
